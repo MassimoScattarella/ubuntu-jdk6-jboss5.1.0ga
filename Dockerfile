@@ -28,9 +28,8 @@ ENV LC_ALL en_US.UTF-8
 
 # Install JAVA Oracle JDK
 ##########################################
-# 1. Download manually JDK (http://download.oracle.com/otn/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin)
 
-COPY jdk-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.bin /
+ADD https://github.com/MassimoScattarella/ubuntu-jdk6-jboss5.1.0ga/raw/master/jdk-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.bin /
 
 RUN chmod +x jdk-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.bin \
  && ./jdk-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.bin \
